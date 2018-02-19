@@ -70,7 +70,6 @@ score_right = 0
 // Do state actions
 script_execute(level_state_current)
 
-// Check for dead people
 
 </string>
           </argument>
@@ -96,6 +95,16 @@ script_execute(level_state_current)
             <kind>1</kind>
             <string>/// Reset variables
 
+// Set level state
+room_current = room_get_name(room)
+
+if(string_pos("arena", room_current) != 0) {
+    level_state_current = level_states[? "arena"]
+}
+else if (string_pos("intermediate", room_current) != 0) {
+    level_state_current = level_states[? "intermediate"]
+}
+
 // Move player to start position
 with(obj_player) {
     x = obj_start_point.x
@@ -116,7 +125,6 @@ if(level_state_current == level_states[? "arena"]) {
         fighter_right = instance_find(obj_enemy_base, 0)
     }
 }
-
 </string>
           </argument>
         </arguments>

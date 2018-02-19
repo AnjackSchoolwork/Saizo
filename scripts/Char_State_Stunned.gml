@@ -3,7 +3,5 @@
 /// Also use when starting a new level
 
 if(current_time - stun_start_time > max_stun_duration) {
-    with(obj_player) {
-        script_execute(next_state)
-    }
+    script_execute(next_state)
 }

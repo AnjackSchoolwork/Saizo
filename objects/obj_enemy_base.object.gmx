@@ -57,9 +57,12 @@ char_health = 100
             <string>/// Checks
 
 // Am I dead?
-if(char_health &lt;= 0) {
+if(char_health &lt;= 0 &amp;&amp; char_state_current != char_states[? "stunned"] &amp;&amp; char_state_current != char_states[? "dead"]) {
+    char_health = 0
     enter_state_stunned(Enter_State_Dead)
 }
+
+script_execute(char_state_current)
 </string>
           </argument>
         </arguments>

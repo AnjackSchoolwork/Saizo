@@ -49,6 +49,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_arena_test</room>
+    <room>rooms\rm_intermediate_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
