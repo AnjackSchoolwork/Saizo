@@ -35,6 +35,14 @@ ds_map_add(level_states, "menu", Level_State_Menu)
 
 level_state_current = level_states[? "arena"]
 
+// Track fighters for arena matches
+fighter_left = noone
+fighter_right = noone
+
+// Track score for arena matches
+// Player 1 is always on the left, player 2 or enemy on the right
+score_left = 0
+score_right = 0
 </string>
           </argument>
         </arguments>
@@ -61,6 +69,9 @@ level_state_current = level_states[? "arena"]
 
 // Do state actions
 script_execute(level_state_current)
+
+// Check for dead people
+
 </string>
           </argument>
         </arguments>
@@ -94,6 +105,16 @@ with(obj_player) {
     direction = 0
     
     enter_state_stunned()
+}
+
+if(level_state_current == level_states[? "arena"]) {
+    fighter_left = instance_find(obj_player_1, 0)
+    
+    fighter_right = instance_find(obj_player_2, 0)
+    
+    if(fighter_right == noone) {
+        fighter_right = instance_find(obj_enemy_base, 0)
+    }
 }
 
 </string>

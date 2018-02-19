@@ -32,7 +32,6 @@
     <script>scripts\Enter_State_Dead.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
     <object>objects\game_controller</object>
     <object>objects\obj_start_point</object>
     <object>objects\input_controller</object>
@@ -42,6 +41,11 @@
       <object>objects\enemy_controller</object>
     </objects>
     <object>objects\entity_base</object>
+    <objects name="Players">
+      <object>objects\obj_player</object>
+      <object>objects\obj_player_1</object>
+      <object>objects\obj_player_2</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_arena_test</room>
