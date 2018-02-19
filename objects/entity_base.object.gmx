@@ -4,11 +4,11 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,14 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Handle all input
+            <string>/// Initialize shared variables
 
-// Allow input when player is not stunned
-if(obj_player.char_state_current != obj_player.char_states[? "stunned"] and obj_player.char_state_current != obj_player.char_states[? "dead"]) {
-    with(obj_player) {
-        handleInput()
-    }
-}
+// Stats
+char_health = 100
+char_defense = 10
+
+// State vars
+char_states = ds_map_create()
+ds_map_add(char_states, "idle", Char_State_Idle)
+ds_map_add(char_states, "attacking", Char_State_Attacking)
+ds_map_add(char_states, "blocking", Char_State_Blocking)
+ds_map_add(char_states, "combo", Char_State_Combo)
+ds_map_add(char_states, "stunned", Char_State_Stunned)
+ds_map_add(char_states, "dead", Char_State_Dead)
+
+char_state_current = char_states[? "idle"]
 </string>
           </argument>
         </arguments>

@@ -4,6 +4,6 @@
 
 if(current_time - stun_start_time > max_stun_duration) {
     with(obj_player) {
-        enter_state_idle()
+        script_execute(next_state)
     }
 }

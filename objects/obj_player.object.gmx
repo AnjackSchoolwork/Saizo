@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>entity_base</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -27,29 +27,43 @@
             <kind>1</kind>
             <string>/// Initialize Variables
 
+// Run parent initialization first
+event_inherited()
+
+// What input is player using?
+controller = "keyboard"
+gamepad_slot = undefined
+
 // Movement variables
 default_move_speed = 200
+char_horiz_direction = 0
 
 // Attack variables
-h_atk_dmg = 10
+// Duration in milliseconds
+atk_anim_duration = 0
+atk_range = 0
+atk_radius = 0
+atk_dmg = 0
+// Heavy attack
+h_atk_pressed = false
+h_atk_duration = 1000
+h_atk_range = 75
+h_atk_radius = 100
+h_atk_dmg = 20
+// Medium Attack
+m_atk_pressed = false
+m_atk_duration = 750
+m_atk_range = 50
+m_atk_radius = 75
 m_atk_dmg = 10
-l_atk_dmg = 10
-atk_range = 100
+// Light Attack
+l_atk_pressed = false
+l_atk_duration = 250
+l_atk_range = 50
+l_atk_radius = 75
+l_atk_dmg = 5
 
-// Stats
-char_health = 100
-char_defense = 10
 
-// State vars
-char_states = ds_map_create()
-ds_map_add(char_states, "idle", Char_State_Idle)
-ds_map_add(char_states, "attacking", Char_State_Attacking)
-ds_map_add(char_states, "blocking", Char_State_Blocking)
-ds_map_add(char_states, "combo", Char_State_Combo)
-ds_map_add(char_states, "stunned", Char_State_Stunned)
-ds_map_add(char_states, "dead", Char_State_Dead)
-
-char_state_current = char_states[? "idle"]
 
 // Define controls
 keyboard_controls = ds_map_create()
@@ -57,9 +71,9 @@ ds_map_add(keyboard_controls, "up", vk_up)
 ds_map_add(keyboard_controls, "down", vk_down)
 ds_map_add(keyboard_controls, "left", vk_left)
 ds_map_add(keyboard_controls, "right", vk_right)
-ds_map_add(keyboard_controls, "h_atk", ord('z'))
-ds_map_add(keyboard_controls, "m_atk", ord('x'))
-ds_map_add(keyboard_controls, "l_atk", ord('c'))
+ds_map_add(keyboard_controls, "h_atk", ord('V'))
+ds_map_add(keyboard_controls, "m_atk", ord('B'))
+ds_map_add(keyboard_controls, "l_atk", ord('N'))
 
 gamepad_controls = ds_map_create()
 // Fill this out

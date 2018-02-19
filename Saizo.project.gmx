@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_placeholder_player</sprite>
     <sprite>sprites\spr_player_start</sprite>
+    <sprite>sprites\spr_placeholder_enemy</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_placeholder</background>
@@ -27,14 +28,20 @@
     <script>scripts\moveChar.gml</script>
     <script>scripts\enter_state_stunned.gml</script>
     <script>scripts\enter_state_idle.gml</script>
+    <script>scripts\Enter_State_Attacking.gml</script>
+    <script>scripts\Enter_State_Dead.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\game_controller</object>
-    <object>objects\enemy_controller</object>
-    <object>objects\obj_enemy_base</object>
     <object>objects\obj_start_point</object>
     <object>objects\input_controller</object>
+    <objects name="Enemies">
+      <object>objects\obj_enemy_fighter_m</object>
+      <object>objects\obj_enemy_base</object>
+      <object>objects\enemy_controller</object>
+    </objects>
+    <object>objects\entity_base</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_arena_test</room>
