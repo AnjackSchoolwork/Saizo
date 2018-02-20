@@ -39,6 +39,7 @@ level_state_current = level_states[? "menu"]
 fighter_left = noone
 fighter_left_name = "Jace"
 fighter_left_sprite = spr_jace
+fighter_left_sprite_s = spr_jace_sm
 fighter_right = noone
 fighter_right_name = "Enemy"
 fighter_right_sprite = spr_placeholder_enemy
@@ -111,6 +112,9 @@ if(string_pos("arena", room_current) != 0) {
 else if (string_pos("intermediate", room_current) != 0) {
     level_state_current = level_states[? "intermediate"]
 }
+else {
+    level_state_current = level_states[? "menu"]
+}
 
 // Move player to start position
 with(obj_player) {
@@ -133,6 +137,11 @@ if(level_state_current == level_states[? "arena"]) {
         fighter_right = instance_find(obj_enemy_base, 0)
     }
     fighter_right.sprite_index = fighter_right_sprite
+}
+if(level_state_current == level_states[? "intermediate"]) {
+    fighter_left = instance_find(obj_player_1, 0)
+    fighter_left.sprite_index = fighter_left_sprite_s
+    fighter_right = instance_find(obj_player_2, 0)
 }
 </string>
           </argument>

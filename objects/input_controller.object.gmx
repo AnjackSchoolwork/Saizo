@@ -8,6 +8,38 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Initialize variables
+
+
+
+// Gamepad is connected
+gamepad_connected = false
+gamepad_id = 0
+
+// Initialize gamepad variables
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -29,7 +61,14 @@
 
 // While not in menu
 if(game_controller.level_state_current == game_controller.level_states[? "menu"]) {
-    handleInput()
+    if(keyboard_check(vk_anykey)) {
+        if(room == rm_menu_main) {
+            room_goto_next()
+        }
+        else if(room == rm_end) {
+            game_restart()
+        }
+    }
 }
 else {
     // Allow input when player is not stunned
@@ -38,6 +77,44 @@ else {
             handleInput()
         }
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="75">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Gamepad connected or disconnected?
+
+switch(async_load[? "event_type"]) {
+    case "gamepad discovered":
+        show_debug_message("Gamepad connected!")
+        gamepad_connected = true
+        // Re-initialize gamepad config
+        gamepad_id = async_load[? "pad_index"]
+        gamepad_set_axis_deadzone(gamepad_id, 0.5)
+        gamepad_set_button_threshold(gamepad_id, 0.1)
+        break
+    case "gamepad lost":
+        show_debug_message("Gamepad disconnected!")
+        gamepad_connected = false
+        break
 }
 </string>
           </argument>

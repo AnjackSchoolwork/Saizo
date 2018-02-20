@@ -1,5 +1,8 @@
 /// Check inputs for key/button presses and do relevant actions
 
+// Check states
+level_state = game_controller.level_state_current
+
 // Actions mapped to keys, not dependant upon states
 
 if(controller == "keyboard") {
@@ -30,7 +33,7 @@ if(controller == "keyboard") {
     horiz_move = keyboard_right + keyboard_left
     
     // Vertical movement only in intermediate levels
-    if(game_controller.level_state_current == game_controller.level_states[? "intermediate"]) {
+    if(level_state == game_controller.level_states[? "intermediate"]) {
     
         if(keyboard_check(keyboard_controls[? "up"])) {
             keyboard_up = 1
@@ -91,7 +94,30 @@ if(controller == "keyboard") {
     
     //##########ATTACKS END##########
 }
-else {
+if (input_controller.gamepad_connected){
+    show_debug_message("TEST")
     // Handle gamepad input here
+    gamepad_x = gamepad_axis_value(input_controller.gamepad_id, gp_axislh)
+    if(gamepad_x != 0) {
+        if(gamepad_x < 0) {
+            new_direction = 180
+        }
+        else {
+            new_direction = 0
+        }
+        moveChar(new_direction, default_move_speed)
+    }
+    if(level_state = game_controller.level_states[? "intermediate"]) {
+        gamepad_y = gamepad_axis_value(input_controller.gamepad_id, gp_axislv)
+        if(gamepad_y != 0) {
+            if(gamepad_y < 0) {
+                new_direction = 90
+            }
+            else {
+                new_direction = 270
+            }
+            moveChar(new_direction, default_move_speed)
+        }
+    }
 
 }

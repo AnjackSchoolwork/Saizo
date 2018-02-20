@@ -9,7 +9,9 @@
     <sprite>sprites\spr_placeholder_player</sprite>
     <sprite>sprites\spr_player_start</sprite>
     <sprite>sprites\spr_placeholder_enemy</sprite>
+    <sprite>sprites\spr_placeholder_enemy_s</sprite>
     <sprite>sprites\spr_jace</sprite>
+    <sprite>sprites\spr_jace_sm</sprite>
     <sprite>sprites\spr_lvl_exit</sprite>
   </sprites>
   <backgrounds name="background">
@@ -37,6 +39,7 @@
   <fonts name="fonts">
     <font>fonts\fnt_UI</font>
     <font>fonts\fnt_debug</font>
+    <font>fonts\fnt_title</font>
   </fonts>
   <objects name="objects">
     <object>objects\game_controller</object>
@@ -44,6 +47,7 @@
     <object>objects\input_controller</object>
     <objects name="Enemies">
       <object>objects\obj_enemy_fighter_m</object>
+      <object>objects\obj_enemy_minion</object>
       <object>objects\obj_enemy_base</object>
       <object>objects\enemy_controller</object>
     </objects>
@@ -61,6 +65,7 @@
     <room>rooms\rm_arena_test</room>
     <room>rooms\rm_intermediate_test</room>
     <room>rooms\rm_arena_test_2</room>
+    <room>rooms\rm_end</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
