@@ -27,10 +27,16 @@
             <kind>1</kind>
             <string>/// Handle all input
 
-// Allow input when player is not stunned
-if(obj_player.char_state_current != obj_player.char_states[? "stunned"] and obj_player.char_state_current != obj_player.char_states[? "dead"]) {
-    with(obj_player) {
-        handleInput()
+// While not in menu
+if(game_controller.level_state_current == game_controller.level_states[? "menu"]) {
+    handleInput()
+}
+else {
+    // Allow input when player is not stunned
+    if(obj_player.char_state_current != obj_player.char_states[? "stunned"] and obj_player.char_state_current != obj_player.char_states[? "dead"]) {
+        with(obj_player) {
+            handleInput()
+        }
     }
 }
 </string>

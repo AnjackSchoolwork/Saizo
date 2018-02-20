@@ -33,16 +33,23 @@ ds_map_add(level_states, "arena", Level_State_Arena)
 ds_map_add(level_states, "intermediate", Level_State_Intermediate)
 ds_map_add(level_states, "menu", Level_State_Menu)
 
-level_state_current = level_states[? "arena"]
+level_state_current = level_states[? "menu"]
 
 // Track fighters for arena matches
 fighter_left = noone
+fighter_left_name = "Jace"
+fighter_left_sprite = spr_jace
 fighter_right = noone
+fighter_right_name = "Enemy"
+fighter_right_sprite = spr_placeholder_enemy
 
 // Track score for arena matches
 // Player 1 is always on the left, player 2 or enemy on the right
 score_left = 0
 score_right = 0
+
+// Set win condition
+max_wins = 2
 </string>
           </argument>
         </arguments>
@@ -118,12 +125,14 @@ with(obj_player) {
 
 if(level_state_current == level_states[? "arena"]) {
     fighter_left = instance_find(obj_player_1, 0)
+    fighter_left.sprite_index = fighter_left_sprite
     
     fighter_right = instance_find(obj_player_2, 0)
     
     if(fighter_right == noone) {
         fighter_right = instance_find(obj_enemy_base, 0)
     }
+    fighter_right.sprite_index = fighter_right_sprite
 }
 </string>
           </argument>

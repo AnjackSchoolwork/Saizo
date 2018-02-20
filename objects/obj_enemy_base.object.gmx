@@ -56,41 +56,7 @@ char_health = 100
             <kind>1</kind>
             <string>/// Checks
 
-// Am I dead?
-if(char_health &lt;= 0 &amp;&amp; char_state_current != char_states[? "stunned"] &amp;&amp; char_state_current != char_states[? "dead"]) {
-    char_health = 0
-    enter_state_stunned(Enter_State_Dead)
-}
-
-script_execute(char_state_current)
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Draw sprite with debug info
-
-draw_sprite(sprite_index, image_index, x, y)
-
-draw_text(x, y - (40 + sprite_height / 2), char_health)
-draw_text(x, y - (20 + sprite_height / 2), script_get_name(char_state_current))
+event_inherited()
 </string>
           </argument>
         </arguments>

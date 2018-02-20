@@ -9,9 +9,12 @@
     <sprite>sprites\spr_placeholder_player</sprite>
     <sprite>sprites\spr_player_start</sprite>
     <sprite>sprites\spr_placeholder_enemy</sprite>
+    <sprite>sprites\spr_jace</sprite>
+    <sprite>sprites\spr_lvl_exit</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_placeholder</background>
+    <background>background\bkgrnd_placeholder_2</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -31,6 +34,10 @@
     <script>scripts\Enter_State_Attacking.gml</script>
     <script>scripts\Enter_State_Dead.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_UI</font>
+    <font>fonts\fnt_debug</font>
+  </fonts>
   <objects name="objects">
     <object>objects\game_controller</object>
     <object>objects\obj_start_point</object>
@@ -46,10 +53,14 @@
       <object>objects\obj_player_1</object>
       <object>objects\obj_player_2</object>
     </objects>
+    <object>objects\ui_controller</object>
+    <object>objects\obj_lvl_exit</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_menu_main</room>
     <room>rooms\rm_arena_test</room>
     <room>rooms\rm_intermediate_test</room>
+    <room>rooms\rm_arena_test_2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

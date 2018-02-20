@@ -5,6 +5,11 @@
 if(controller == "keyboard") {
     // Handle keyboard input here
     
+    // Debug and cheat controls
+    if(keyboard_check(ord('P'))) {
+        obj_player_1.char_health -= 100
+    }
+    
     //##########MOVEMENT BEGIN##########
     
     // Horizontal movement for arena and intermediate levels

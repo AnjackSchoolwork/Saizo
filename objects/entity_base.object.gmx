@@ -28,7 +28,8 @@
             <string>/// Initialize shared variables
 
 // Stats
-char_health = 100
+char_health_max = 100
+char_health = char_health_max
 char_defense = 10
 
 // State vars
@@ -41,6 +42,68 @@ ds_map_add(char_states, "stunned", Char_State_Stunned)
 ds_map_add(char_states, "dead", Char_State_Dead)
 
 char_state_current = char_states[? "idle"]
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Check for death and/or execute state actions
+
+// Am I dead?
+if(char_health &lt;= 0 &amp;&amp; char_state_current != char_states[? "stunned"] &amp;&amp; char_state_current != char_states[? "dead"]) {
+    char_health = 0
+    enter_state_stunned(Enter_State_Dead)
+}
+
+script_execute(char_state_current)
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Draw sprite with debug info
+
+draw_sprite(sprite_index, image_index, x, y)
+draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
+draw_set_font(fnt_debug)
+draw_text(x, y - (40 + sprite_height / 2), char_health)
+draw_text(x, y - (20 + sprite_height / 2), script_get_name(char_state_current))
+
 </string>
           </argument>
         </arguments>
