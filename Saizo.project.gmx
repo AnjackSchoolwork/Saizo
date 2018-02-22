@@ -34,7 +34,7 @@
     <script>scripts\enter_state_idle.gml</script>
     <script>scripts\Enter_State_Attacking.gml</script>
     <script>scripts\Enter_State_Dead.gml</script>
-    <script>scripts\arena_ai_think.gml</script>
+    <script>scripts\ai_consider.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_UI</font>
@@ -59,7 +59,6 @@
     </objects>
     <object>objects\ui_controller</object>
     <object>objects\obj_lvl_exit</object>
-    <object>objects\ai_controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu_main</room>

@@ -27,6 +27,9 @@
             <kind>1</kind>
             <string>/// Initialize variables
 
+// used for minions only
+max_detect_range = 1000 // Maximum range at which minion AI will act
+
 // grab difficulty values
 dif_low = game_controller.difficulty_levels[? "low"]
 dif_med = game_controller.difficulty_levels[? "medium"]
@@ -39,7 +42,8 @@ switch(game_controller.difficulty) {
     // base_speed: base move speed, modified by aggression lvl
     // min_range: closest ai will move toward opponent
     // max_range: furthest ai will move away from opponent
-    // base_atk_chance: ds_map, each element is key name of attack with value being chance between 0 and 1
+    // base_atk_chance: ds_map, each element is key = name of 
+    //          attack with value = chance between 0 and 1
     case dif_med:
         base_agression = 1
         base_speed = 10
@@ -49,7 +53,7 @@ switch(game_controller.difficulty) {
         ds_map_add(base_atk_chance, "medium", 1)
         ds_map_add(base_atk_chance, "high", 1)
         ds_map_add(base_atk_chance, "combo 1", 1)
-        ds_map_add(base_atk_chance, "combo 2", 1)
+        ds_map_add(base_atk_chance, "combo 2", 0.5)
         break
     case dif_high:
         base_agression = 2
@@ -58,9 +62,9 @@ switch(game_controller.difficulty) {
         max_range = 200
         ds_map_add(base_atk_chance, "low", 0.25)
         ds_map_add(base_atk_chance, "medium", 0.5)
-        ds_map_add(base_atk_chance, "high", 1)
+        ds_map_add(base_atk_chance, "high", 0.75)
         ds_map_add(base_atk_chance, "combo 1", 1)
-        ds_map_add(base_atk_chance, "combo 2", 1.5)
+        ds_map_add(base_atk_chance, "combo 2", 1)
         break
     default: // Default to low
         base_agression = 0

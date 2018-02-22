@@ -37,10 +37,10 @@ level_state_current = level_states[? "menu"]
 
 // Difficulty level
 difficulty_levels = ds_map_create()
-ds_map_add(difficulty_levels, "high", 0)
+ds_map_add(difficulty_levels, "low", 0)
 ds_map_add(difficulty_levels, "medium", 1)
-ds_map_add(difficulty_levels, "low", 2)
-difficulty = difficulty_levels[? "low"] // Default difficulty
+ds_map_add(difficulty_levels, "high", 2)
+difficulty = difficulty_levels[? "high"] // Default difficulty
 
 // Multiplayer variables
 is_multiplayer = false
