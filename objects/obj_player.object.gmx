@@ -78,12 +78,6 @@ ds_map_add(keyboard_controls, "l_atk", ord('N'))
 gamepad_controls = ds_map_create()
 //ds_map_add(gamepad_controls, "up", 
 
-// Define combos
-combo_one_left = ds_list_create()
-ds_list_add(combo_one_left, "left")
-ds_list_add(combo_one_left, "l_atk")
-
-combo_one_right = ds_list_create()
 </string>
           </argument>
         </arguments>

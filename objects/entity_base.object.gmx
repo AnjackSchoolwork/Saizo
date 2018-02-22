@@ -37,7 +37,6 @@ char_states = ds_map_create()
 ds_map_add(char_states, "idle", Char_State_Idle)
 ds_map_add(char_states, "attacking", Char_State_Attacking)
 ds_map_add(char_states, "blocking", Char_State_Blocking)
-ds_map_add(char_states, "combo", Char_State_Combo)
 ds_map_add(char_states, "stunned", Char_State_Stunned)
 ds_map_add(char_states, "dead", Char_State_Dead)
 
@@ -96,6 +95,7 @@ script_execute(char_state_current)
           <argument>
             <kind>1</kind>
             <string>/// Draw sprite with debug info
+
 
 draw_sprite(sprite_index, image_index, x, y)
 draw_set_halign(fa_center)

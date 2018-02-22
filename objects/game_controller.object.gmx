@@ -35,6 +35,16 @@ ds_map_add(level_states, "menu", Level_State_Menu)
 
 level_state_current = level_states[? "menu"]
 
+// Difficulty level
+difficulty_levels = ds_map_create()
+ds_map_add(difficulty_levels, "high", 0)
+ds_map_add(difficulty_levels, "medium", 1)
+ds_map_add(difficulty_levels, "low", 2)
+difficulty = difficulty_levels[? "low"] // Default difficulty
+
+// Multiplayer variables
+is_multiplayer = false
+
 // Track fighters for arena matches
 fighter_left = noone
 fighter_left_name = "Jace"

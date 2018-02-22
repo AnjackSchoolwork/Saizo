@@ -1,5 +1,8 @@
 /// Initialize variables for this state
 
+combo = false
+combo_num = 0 // default to weak combo
+
 // Prioritize attacks in case multiple buttons pressed simultaneously
 if(h_atk_pressed) {
     atk_anim_duration = h_atk_duration
@@ -19,18 +22,24 @@ else if (l_atk_pressed) {
     atk_radius =l_atk_radius
     atk_dmg = l_atk_dmg
 }
+// Else check for easy combo button
 
 attack_start_time = current_time
 
-char_state_current = char_states[? "attacking"]
-
-// Check for hit
-with(obj_enemy_base) {
-    hit = collision_circle(other.x + (other.char_horiz_direction * other.atk_range), other.y, other.atk_radius, self, false, false)
-    if(hit) {
-        char_health -= other.atk_dmg
+// Check for weak combo (move plus light attack)
+if(l_atk_pressed) {
+    if(keyboard_check(obj_player.keyboard_controls[? "left"]) 
+    or keyboard_check(obj_player.keyboard_controls[? "right"])) { // Also need to check for gamepad movement
+        // Enter combo instead
+        combo = true
+        atk_anim_duration = l_atk_duration
+        atk_range = l_atk_range * 2
+        atk_radius = l_atk_radius
+        atk_dmg = l_atk_dmg * 2
     }
 }
 
-// Apply damage
+char_state_current = char_states[? "attacking"]
+
+
 
