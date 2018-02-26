@@ -21,6 +21,13 @@
       <sprite>sprites\spr_jace_sm_right</sprite>
       <sprite>sprites\spr_jace_sm_left</sprite>
       <sprite>sprites\spr_jace_atk_mid</sprite>
+      <sprite>sprites\spr_jace_combo_advanced</sprite>
+      <sprite>sprites\spr_jace_combo_easy</sprite>
+      <sprite>sprites\spr_jace_combo_standard</sprite>
+      <sprite>sprites\spr_jace_death</sprite>
+      <sprite>sprites\spr_jace_strike_high</sprite>
+      <sprite>sprites\spr_jace_strike_low</sprite>
+      <sprite>sprites\spr_jace_strike_mid</sprite>
     </sprites>
     <sprites name="minion">
       <sprite>sprites\spr_placeholder_enemy_right</sprite>
