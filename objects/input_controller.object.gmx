@@ -61,11 +61,16 @@ gamepad_id = 0
 
 // While not in menu
 if(game_controller.level_state_current == game_controller.level_states[? "menu"]) {
+    if(keyboard_check(vk_escape) and room != rm_menu_main) {
+        room = rm_menu_main
+        exit
+    }
+    
     if(keyboard_check(vk_anykey)) {
         if(room == rm_menu_main) {
-            room_goto_next()
+        
         }
-        else if(room == rm_end) {
+        else {
             game_restart()
         }
     }

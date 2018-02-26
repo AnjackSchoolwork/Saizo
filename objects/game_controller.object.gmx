@@ -89,6 +89,29 @@ script_execute(level_state_current)
         </arguments>
       </action>
     </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>audio_stop_all()
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
@@ -119,6 +142,17 @@ else if (string_pos("intermediate", room_current) != 0) {
 }
 else {
     level_state_current = level_states[? "menu"]
+}
+
+// Start music
+if(room == rm_menu_main) {
+    audio_play_sound(Mus_Title, 1, true)
+}
+else if (level_state_current == level_states[? "menu"]) {
+    audio_play_sound(Mus_Menu, 1, true)
+}
+else {
+    audio_play_sound(Mus_Game, 1, true)
 }
 
 // Move player to start position

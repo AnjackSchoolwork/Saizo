@@ -4,7 +4,13 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sounds name="Music">
+      <sound>sound\Mus_Title</sound>
+      <sound>sound\Mus_Menu</sound>
+      <sound>sound\Mus_Game</sound>
+    </sounds>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_placeholder_player</sprite>
     <sprite>sprites\spr_player_start</sprite>
@@ -37,6 +43,7 @@
     <background>background\bkgrnd_temple</background>
     <background>background\bkgrnd_scrolling</background>
     <background>background\bkgrnd_main_menu</background>
+    <background>background\bkgrnd_credits</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
