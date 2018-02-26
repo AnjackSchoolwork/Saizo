@@ -22,6 +22,12 @@
       <sprite>sprites\spr_placeholder_enemy_s_left</sprite>
       <sprite>sprites\spr_placeholder_enemy_left</sprite>
     </sprites>
+    <sprites name="menu">
+      <sprite>sprites\spr_btn_credits</sprite>
+      <sprite>sprites\spr_btn_exit</sprite>
+      <sprite>sprites\spr_btn_help</sprite>
+      <sprite>sprites\spr_btn_play</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_placeholder</background>
@@ -30,6 +36,7 @@
     <background>background\bkgrnd_garden</background>
     <background>background\bkgrnd_temple</background>
     <background>background\bkgrnd_scrolling</background>
+    <background>background\bkgrnd_main_menu</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -72,6 +79,12 @@
     </objects>
     <object>objects\ui_controller</object>
     <object>objects\obj_lvl_exit</object>
+    <objects name="MainMenu">
+      <object>objects\obj_btn_play</object>
+      <object>objects\obj_btn_help</object>
+      <object>objects\obj_btn_credits</object>
+      <object>objects\obj_btn_exit</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu_main</room>
@@ -79,6 +92,8 @@
     <room>rooms\rm_intermediate_1</room>
     <room>rooms\rm_arena_2</room>
     <room>rooms\rm_end</room>
+    <room>rooms\rm_credits</room>
+    <room>rooms\rm_help</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
