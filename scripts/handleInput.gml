@@ -69,10 +69,12 @@ if(controller == "keyboard") {
         if(horiz_move > 0) {
             new_direction = 0
             char_horiz_direction = 1
+            sprite_index = sprite_right
         }
         else {
             new_direction = 180
             char_horiz_direction = -1
+            sprite_index = sprite_left
         }
         
         moveChar(new_direction, default_move_speed) // Need tweening/interpolation?

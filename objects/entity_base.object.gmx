@@ -27,6 +27,16 @@
             <kind>1</kind>
             <string>/// Initialize shared variables
 
+// Who am I?
+char_name = "Nobody"
+
+// Direction
+char_horiz_direction = 0
+
+// Sprite
+sprite_left = spr_placeholder_player
+sprite_right = spr_placeholder_player
+
 // Stats
 char_health_max = 100
 char_health = char_health_max

@@ -21,20 +21,6 @@ else {
 if(tgt_range >= max_detect_range) {
     exit
 }
-
-// Agression always moves toward 0
-if(base_aggression != 0) {
-    base_aggression -= (base_aggression / abs(base_aggression)) * 0.01
-}
-
-// Calculate aggression
-aggression = base_aggression
-
-speed = aggression * base_speed * tgt_direction
-
-if((aggression >= 0 and tgt_range > min_range) 
-    or (aggression < 0 and tgt_range < max_range)) {
-    
-    speed = 0
-    
+else if (tgt_range >= min_range) {
+    moveChar(point_direction(x, y, obj_player_1.x, obj_player_1.y), base_speed)
 }

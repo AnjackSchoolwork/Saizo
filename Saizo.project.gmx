@@ -8,15 +8,28 @@
   <sprites name="sprites">
     <sprite>sprites\spr_placeholder_player</sprite>
     <sprite>sprites\spr_player_start</sprite>
-    <sprite>sprites\spr_placeholder_enemy</sprite>
-    <sprite>sprites\spr_placeholder_enemy_s</sprite>
-    <sprite>sprites\spr_jace</sprite>
-    <sprite>sprites\spr_jace_sm</sprite>
     <sprite>sprites\spr_lvl_exit</sprite>
+    <sprites name="Jace">
+      <sprite>sprites\spr_jace_right</sprite>
+      <sprite>sprites\spr_jace_left</sprite>
+      <sprite>sprites\spr_jace_sm_right</sprite>
+      <sprite>sprites\spr_jace_sm_left</sprite>
+      <sprite>sprites\spr_jace_atk_mid</sprite>
+    </sprites>
+    <sprites name="minion">
+      <sprite>sprites\spr_placeholder_enemy_right</sprite>
+      <sprite>sprites\spr_placeholder_enemy_s_right</sprite>
+      <sprite>sprites\spr_placeholder_enemy_s_left</sprite>
+      <sprite>sprites\spr_placeholder_enemy_left</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_placeholder</background>
     <background>background\bkgrnd_placeholder_2</background>
+    <background>background\bkgrnd_coliseum</background>
+    <background>background\bkgrnd_garden</background>
+    <background>background\bkgrnd_temple</background>
+    <background>background\bkgrnd_scrolling</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -62,9 +75,9 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_menu_main</room>
-    <room>rooms\rm_arena_test</room>
-    <room>rooms\rm_intermediate_test</room>
-    <room>rooms\rm_arena_test_2</room>
+    <room>rooms\rm_arena_1</room>
+    <room>rooms\rm_intermediate_1</room>
+    <room>rooms\rm_arena_2</room>
     <room>rooms\rm_end</room>
   </rooms>
   <help>

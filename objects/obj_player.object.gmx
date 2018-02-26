@@ -30,13 +30,15 @@
 // Run parent initialization first
 event_inherited()
 
+sprite_right = spr_jace_right
+sprite_left = spr_jace_left
+
 // What input is player using?
 controller = "keyboard"
 gamepad_slot = undefined
 
 // Movement variables
 default_move_speed = 200
-char_horiz_direction = 0
 
 // Attack variables
 // Duration in milliseconds
@@ -47,19 +49,19 @@ atk_dmg = 0
 // Heavy attack
 h_atk_pressed = false
 h_atk_duration = 1000
-h_atk_range = 75
+h_atk_range = 100
 h_atk_radius = 100
 h_atk_dmg = 20
 // Medium Attack
 m_atk_pressed = false
 m_atk_duration = 750
-m_atk_range = 50
+m_atk_range = 75
 m_atk_radius = 75
 m_atk_dmg = 10
 // Light Attack
 l_atk_pressed = false
 l_atk_duration = 250
-l_atk_range = 50
+l_atk_range = 75
 l_atk_radius = 75
 l_atk_dmg = 5
 
