@@ -70,6 +70,13 @@
       <sprite>sprites\spr_koth_strike_mid</sprite>
       <sprite>sprites\spr_koth_walk</sprite>
     </sprites>
+    <sprites name="Props">
+      <sprite>sprites\spr_vase</sprite>
+      <sprite>sprites\spr_vase_break</sprite>
+      <sprite>sprites\spr_can</sprite>
+      <sprite>sprites\spr_can_break</sprite>
+      <sprite>sprites\spr_cat</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bkgrnd_placeholder</background>
@@ -129,6 +136,11 @@
       <object>objects\obj_btn_help</object>
       <object>objects\obj_btn_credits</object>
       <object>objects\obj_btn_exit</object>
+    </objects>
+    <objects name="Props">
+      <object>objects\obj_breakable</object>
+      <object>objects\obj_vase</object>
+      <object>objects\obj_can</object>
     </objects>
   </objects>
   <rooms name="rooms">

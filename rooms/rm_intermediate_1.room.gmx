@@ -59,6 +59,8 @@
     <instance objName="obj_enemy_minion" x="1984" y="928" name="inst_011405DD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_minion" x="2400" y="704" name="inst_A0C69BB7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_minion" x="2752" y="896" name="inst_1C599891" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vase" x="960" y="736" name="inst_D9833EB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_can" x="1792" y="928" name="inst_92EDC398" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
