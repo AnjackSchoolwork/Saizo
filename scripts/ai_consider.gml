@@ -11,16 +11,23 @@ else {
     tgt_range = distance_to_object(target_player)
     if(target_player.x < x) {
         tgt_direction = -1
+        walk_image = spr_walk_left
+        stand_image = spr_left
     }
     else {
         tgt_direction = 1
+        walk_image = spr_walk_right
+        stand_image = spr_right
     }
 }
 
-// If player is too far away, just ignore
-if(tgt_range >= max_detect_range) {
-    exit
-}
-else if (tgt_range >= min_range) {
-    moveChar(point_direction(x, y, obj_player_1.x, obj_player_1.y), base_speed)
+if(char_state_current == char_states[? "idle"]) {
+    // If player is too far away, just ignore, otherwise pursue
+    if(tgt_range >= max_detect_range and tgt_range >= min_range) {
+        sprite_index = walk_image
+        moveChar(point_direction(x, y, obj_player_1.x, obj_player_1.y), base_speed)
+    }
+    else {
+        sprite_index = stand_image
+    }
 }

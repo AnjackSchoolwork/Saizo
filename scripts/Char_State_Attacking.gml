@@ -13,7 +13,7 @@ else if(current_time - attack_start_time >= atk_anim_duration) {
         }
     }
 
-
+    image_speed = 0
     enter_state_idle()
     exit
 }

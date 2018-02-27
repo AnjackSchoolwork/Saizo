@@ -63,21 +63,33 @@ if(controller == "keyboard") {
         }
     
     }
-    // Horizontal movement in either arena or intermediate levels
-    if(horiz_move != 0)
-    {
-        if(horiz_move > 0) {
-            new_direction = 0
-            char_horiz_direction = 1
-            sprite_index = sprite_right
+    if(char_state_current == char_states[? "idle"]) {
+        // Horizontal movement in either arena or intermediate levels
+        if(horiz_move != 0)
+        {
+            image_speed = 0.25
+            if(horiz_move > 0) {
+                new_direction = 0
+                char_horiz_direction = 1
+                sprite_index = spr_walk_left
+            }
+            else {
+                new_direction = 180
+                char_horiz_direction = -1
+                sprite_index = spr_walk_right
+            }
+            
+            moveChar(new_direction, default_move_speed) // Need tweening/interpolation?
         }
         else {
-            new_direction = 180
-            char_horiz_direction = -1
-            sprite_index = sprite_left
+            image_speed = 0
+            if(direction == 0) {
+                sprite_index = spr_right
+            }
+            else {
+                sprite_index = spr_left
+            }
         }
-        
-        moveChar(new_direction, default_move_speed) // Need tweening/interpolation?
     }
     //##########MOVEMENT END##########
     

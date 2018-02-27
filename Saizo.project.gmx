@@ -28,13 +28,17 @@
       <sprite>sprites\spr_jace_strike_high</sprite>
       <sprite>sprites\spr_jace_strike_low</sprite>
       <sprite>sprites\spr_jace_strike_mid</sprite>
-      <sprite>sprites\spr_jace_walk</sprite>
+      <sprite>sprites\spr_jace_walk_left</sprite>
+      <sprite>sprites\spr_jace_walk_right</sprite>
     </sprites>
     <sprites name="minion">
-      <sprite>sprites\spr_placeholder_enemy_right</sprite>
+      <sprite>sprites\spr_minion_right</sprite>
       <sprite>sprites\spr_placeholder_enemy_s_right</sprite>
       <sprite>sprites\spr_placeholder_enemy_s_left</sprite>
-      <sprite>sprites\spr_placeholder_enemy_left</sprite>
+      <sprite>sprites\spr_minion_left</sprite>
+      <sprite>sprites\spr_minion_punch_right</sprite>
+      <sprite>sprites\spr_minion_walk_right</sprite>
+      <sprite>sprites\spr_minion_walk_left</sprite>
     </sprites>
     <sprites name="menu">
       <sprite>sprites\spr_btn_credits</sprite>
@@ -47,12 +51,24 @@
       <sprite>sprites\spr_saizo_atk_high</sprite>
       <sprite>sprites\spr_saizo_atk_low</sprite>
       <sprite>sprites\spr_saizo_atk_mid</sprite>
-      <sprite>sprites\spr_saizo_fireball</sprite>
+      <sprite>sprites\spr_saizo_atk_fireball</sprite>
       <sprite>sprites\spr_saizo_walk</sprite>
+      <sprite>sprites\spr_saizo_combo_advanced</sprite>
+      <sprite>sprites\spr_saizo_combo_easy</sprite>
+      <sprite>sprites\spr_saizo_combo_standard</sprite>
+      <sprite>sprites\spr_saizo_aoe</sprite>
+      <sprite>sprites\spr_saizo_fireball</sprite>
     </sprites>
     <sprites name="Koth">
       <sprite>sprites\spr_koth_right</sprite>
       <sprite>sprites\spr_koth_left</sprite>
+      <sprite>sprites\spr_koth_combo_advanced</sprite>
+      <sprite>sprites\spr_koth_combo_easy</sprite>
+      <sprite>sprites\spr_koth_combo_standard</sprite>
+      <sprite>sprites\spr_koth_strike_high</sprite>
+      <sprite>sprites\spr_koth_strike_low</sprite>
+      <sprite>sprites\spr_koth_strike_mid</sprite>
+      <sprite>sprites\spr_koth_walk</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">

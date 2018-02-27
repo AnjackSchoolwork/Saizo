@@ -32,6 +32,17 @@ event_inherited()
 
 // What's my name?
 char_name = "Jace"
+
+
+// Sprites
+spr_left = spr_jace_left
+spr_right = spr_jace_right
+spr_walk_left = spr_jace_walk_left
+spr_walk_right = spr_jace_walk_right
+spr_atk_low = spr_jace_strike_low
+spr_atk_mid = spr_jace_strike_mid
+spr_atk_high = spr_jace_strike_high
+
 </string>
           </argument>
         </arguments>
