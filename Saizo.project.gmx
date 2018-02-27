@@ -28,6 +28,7 @@
       <sprite>sprites\spr_jace_strike_high</sprite>
       <sprite>sprites\spr_jace_strike_low</sprite>
       <sprite>sprites\spr_jace_strike_mid</sprite>
+      <sprite>sprites\spr_jace_walk</sprite>
     </sprites>
     <sprites name="minion">
       <sprite>sprites\spr_placeholder_enemy_right</sprite>
@@ -40,6 +41,18 @@
       <sprite>sprites\spr_btn_exit</sprite>
       <sprite>sprites\spr_btn_help</sprite>
       <sprite>sprites\spr_btn_play</sprite>
+    </sprites>
+    <sprites name="Saizo">
+      <sprite>sprites\spr_saizo_stand</sprite>
+      <sprite>sprites\spr_saizo_atk_high</sprite>
+      <sprite>sprites\spr_saizo_atk_low</sprite>
+      <sprite>sprites\spr_saizo_atk_mid</sprite>
+      <sprite>sprites\spr_saizo_fireball</sprite>
+      <sprite>sprites\spr_saizo_walk</sprite>
+    </sprites>
+    <sprites name="Koth">
+      <sprite>sprites\spr_koth_right</sprite>
+      <sprite>sprites\spr_koth_left</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -81,6 +94,8 @@
     <object>objects\input_controller</object>
     <objects name="Enemies">
       <object>objects\obj_enemy_fighter_m</object>
+      <object>objects\obj_saizo</object>
+      <object>objects\obj_koth</object>
       <object>objects\obj_enemy_minion</object>
       <object>objects\obj_enemy_base</object>
       <object>objects\enemy_controller</object>
@@ -105,6 +120,8 @@
     <room>rooms\rm_arena_1</room>
     <room>rooms\rm_intermediate_1</room>
     <room>rooms\rm_arena_2</room>
+    <room>rooms\rm_intermediate_2</room>
+    <room>rooms\rm_arena_3</room>
     <room>rooms\rm_end</room>
     <room>rooms\rm_credits</room>
     <room>rooms\rm_help</room>
