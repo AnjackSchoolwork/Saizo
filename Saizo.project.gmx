@@ -10,6 +10,10 @@
       <sound>sound\Mus_Menu</sound>
       <sound>sound\Mus_Game</sound>
     </sounds>
+    <sounds name="fx">
+      <sound>sound\snd_hit</sound>
+      <sound>sound\snd_pickup</sound>
+    </sounds>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_placeholder_player</sprite>

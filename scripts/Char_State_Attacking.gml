@@ -4,6 +4,7 @@ if(object_index != obj_player_1) {
     if(current_time - attack_start_time >= choose(1000, 2000)) {
         
         obj_player_1.char_health -= 5
+        sound_play(snd_hit)
         
         sprite_index = spr_left
         enter_state_idle()
@@ -16,6 +17,7 @@ else if(current_time - attack_start_time >= atk_anim_duration) {
         if(hit) {
             // Apply damage
             char_health -= other.atk_dmg
+            sound_play(snd_hit)
         }
     }
     
