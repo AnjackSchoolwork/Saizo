@@ -30,13 +30,8 @@
 if(room == rm_menu_main) {
 
 }
-else if(game_controller.level_state_current == game_controller.level_states[? "arena"]) {
-    // Draw score and health bars in arena mode
-    draw_set_halign(fa_center)
-    draw_set_valign(fa_middle)
-    draw_set_font(fnt_UI)
-    draw_text(view_xview + room_width / 2, view_yview + 20, "Score")
-    draw_text(view_xview + room_width / 2, view_yview + 60, string(game_controller.score_left) + " : " + string(game_controller.score_right))
+else if(game_controller.level_state_current == game_controller.level_states[? "arena"] or game_controller.level_state_current == game_controller.level_states[? "intermediate"]) {
+    
     // fighter_left health bar
     bar_x = view_xview + 20
     bar_y = view_xview + 40
@@ -48,17 +43,27 @@ else if(game_controller.level_state_current == game_controller.level_states[? "a
     draw_rectangle(bar_x, bar_y, bar_x + bar_length, bar_y + bar_height, false)
     draw_set_color(c_white)
     draw_rectangle(bar_x, bar_y, bar_x + bar_outline_length, bar_y + 40, true)
-    // fighter_right health bar
-    bar_x = (room_width / 2) + view_xview + 60
-    bar_y = view_xview + 40
-    bar_outline_length = room_width / 2 - 80
-    bar_length = bar_outline_length * (game_controller.fighter_right.char_health / game_controller.fighter_right.char_health_max)
-    bar_height = 40
-    draw_text(bar_x + bar_outline_length / 2, view_yview + 20, game_controller.fighter_right.char_name + " Health")
-    draw_set_color(c_green)
-    draw_rectangle(bar_x, bar_y, bar_x + bar_length, bar_y + bar_height, false)
-    draw_set_color(c_white)
-    draw_rectangle(bar_x, bar_y, bar_x + bar_outline_length, bar_y + 40, true)
+    
+    if(game_controller.level_state_current == game_controller.level_states[? "arena"]) {
+        // Draw score and health bars in arena mode
+        draw_set_halign(fa_center)
+        draw_set_valign(fa_middle)
+        draw_set_font(fnt_UI)
+        draw_text(view_xview + room_width / 2, view_yview + 20, "Score")
+        draw_text(view_xview + room_width / 2, view_yview + 60, string(game_controller.score_left) + " : " + string(game_controller.score_right))
+        
+        // fighter_right health bar
+        bar_x = (room_width / 2) + view_xview + 60
+        bar_y = view_xview + 40
+        bar_outline_length = room_width / 2 - 80
+        bar_length = bar_outline_length * (game_controller.fighter_right.char_health / game_controller.fighter_right.char_health_max)
+        bar_height = 40
+        draw_text(bar_x + bar_outline_length / 2, view_yview + 20, game_controller.fighter_right.char_name + " Health")
+        draw_set_color(c_green)
+        draw_rectangle(bar_x, bar_y, bar_x + bar_length, bar_y + bar_height, false)
+        draw_set_color(c_white)
+        draw_rectangle(bar_x, bar_y, bar_x + bar_outline_length, bar_y + 40, true)
+    }
 }
 else if (game_controller.level_state_current == game_controller.level_states[? "intermediate"]) {
     

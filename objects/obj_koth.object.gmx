@@ -42,9 +42,9 @@ spr_atk_low = spr_koth_strike_low
 spr_atk_mid = spr_koth_strike_mid
 spr_atk_high = spr_koth_strike_high
 spr_death = spr_koth_death
-spr_atk_0 = spr_saizo_atk_low
-spr_atk_1 = spr_saizo_atk_mid
-spr_atk_2 = spr_saizo_atk_high
+spr_atk_0 = spr_koth_strike_low
+spr_atk_1 = spr_koth_strike_mid
+spr_atk_2 = spr_koth_strike_high
 </string>
           </argument>
         </arguments>

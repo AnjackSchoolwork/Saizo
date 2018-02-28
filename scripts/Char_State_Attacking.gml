@@ -1,9 +1,12 @@
 /// Character enters this state when attack begins and attack ends when character exits this state
 
-if(!self.object_index == obj_player_1) {
-    if(current_time - attack_start_time <= choose(1, 2)) {
+if(object_index != obj_player_1) {
+    if(current_time - attack_start_time >= choose(1000, 2000)) {
         
-        obj_player_1.obj_health -= 10 + irandom_range(0, 10)
+        obj_player_1.char_health -= 10 + irandom_range(0, 10)
+        char_state_current = char_states[? "idle"]
+        sprite_index = spr_left
+        enter_state_idle()
     }
 }
 else if(current_time - attack_start_time >= atk_anim_duration) {

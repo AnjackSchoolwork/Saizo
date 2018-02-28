@@ -29,7 +29,9 @@ if(char_state_current == char_states[? "idle"]) {
     }
     else if(tgt_range <= min_range) {
         
-        sprite_index = choose(spr_atk_0, spr_atk_1, spr_atk_2)
+        
+        
+        Enter_State_Attacking()
     }
     else {
         sprite_index = stand_image
