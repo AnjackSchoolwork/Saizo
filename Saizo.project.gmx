@@ -68,7 +68,8 @@
       <sprite>sprites\spr_koth_strike_high</sprite>
       <sprite>sprites\spr_koth_strike_low</sprite>
       <sprite>sprites\spr_koth_strike_mid</sprite>
-      <sprite>sprites\spr_koth_walk</sprite>
+      <sprite>sprites\spr_koth_walk_right</sprite>
+      <sprite>sprites\spr_koth_walk_left</sprite>
     </sprites>
     <sprites name="Props">
       <sprite>sprites\spr_vase</sprite>
@@ -76,6 +77,8 @@
       <sprite>sprites\spr_can</sprite>
       <sprite>sprites\spr_can_break</sprite>
       <sprite>sprites\spr_cat</sprite>
+      <sprite>sprites\spr_health</sprite>
+      <sprite>sprites\spr_powerup</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -141,6 +144,11 @@
       <object>objects\obj_breakable</object>
       <object>objects\obj_vase</object>
       <object>objects\obj_can</object>
+    </objects>
+    <objects name="Pickups">
+      <object>objects\obj_pickup</object>
+      <object>objects\obj_pickukp_health</object>
+      <object>objects\obj_powerup</object>
     </objects>
   </objects>
   <rooms name="rooms">

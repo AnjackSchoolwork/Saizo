@@ -32,6 +32,15 @@ event_inherited()
 
 // Name thyself
 char_name = "Koth"
+
+//sprites
+spr_left = spr_koth_left
+spr_right = spr_koth_right
+spr_walk_left = spr_koth_walk_left
+spr_walk_right = spr_koth_walk_right
+spr_atk_low = spr_koth_strike_low
+spr_atk_mid = spr_koth_strike_mid
+spr_atk_high = spr_koth_strike_high
 </string>
           </argument>
         </arguments>

@@ -23,7 +23,7 @@ else {
 
 if(char_state_current == char_states[? "idle"]) {
     // If player is too far away, just ignore, otherwise pursue
-    if(tgt_range >= max_detect_range and tgt_range >= min_range) {
+    if(tgt_range <= max_detect_range and tgt_range >= min_range) {
         sprite_index = walk_image
         moveChar(point_direction(x, y, obj_player_1.x, obj_player_1.y), base_speed)
     }

@@ -9,9 +9,21 @@ if(controller == "keyboard") {
     // Handle keyboard input here
     
     // Debug and cheat controls
-    if(keyboard_check(ord('P'))) {
+    if(keyboard_check(ord('O'))) {
         obj_player_1.char_health -= 100
     }
+    
+    if(keyboard_check(ord('P'))) {
+        if(room_previous != undefined) {
+            room = room_previous
+        }
+    }
+    else if(keyboard_check(ord('N'))) {
+        if(room_next != undefined) {
+            room = room_next
+        }
+    }
+    
     
     //##########MOVEMENT BEGIN##########
     

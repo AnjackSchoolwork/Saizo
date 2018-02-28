@@ -106,6 +106,14 @@ script_execute(char_state_current)
             <kind>1</kind>
             <string>/// Draw sprite with debug info
 
+if(game_controller.level_state_current == game_controller.level_states[? 'intermediate']) {
+    image_yscale = 0.5
+    image_xscale = 0.5
+}
+else{
+    image_yscale = 1
+    image_xscale = 1
+}
 
 draw_sprite(sprite_index, image_index, x, y)
 draw_set_halign(fa_center)
