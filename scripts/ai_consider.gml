@@ -27,6 +27,10 @@ if(char_state_current == char_states[? "idle"]) {
         sprite_index = walk_image
         moveChar(point_direction(x, y, obj_player_1.x, obj_player_1.y), base_speed)
     }
+    else if(tgt_range <= min_range) {
+        
+        sprite_index = choose(spr_atk_0, spr_atk_1, spr_atk_2)
+    }
     else {
         sprite_index = stand_image
     }

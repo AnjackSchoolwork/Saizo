@@ -37,6 +37,7 @@
       <sprite>sprites\spr_placeholder_enemy_s_left</sprite>
       <sprite>sprites\spr_minion_left</sprite>
       <sprite>sprites\spr_minion_punch_right</sprite>
+      <sprite>sprites\spr_minion_punch_left</sprite>
       <sprite>sprites\spr_minion_walk_right</sprite>
       <sprite>sprites\spr_minion_walk_left</sprite>
       <sprite>sprites\spr_minion_death</sprite>

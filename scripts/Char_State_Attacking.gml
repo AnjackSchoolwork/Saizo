@@ -1,7 +1,10 @@
 /// Character enters this state when attack begins and attack ends when character exits this state
 
-if(combo) {
-    
+if(!self.object_index == obj_player_1) {
+    if(current_time - attack_start_time <= choose(1, 2)) {
+        
+        obj_player_1.obj_health -= 10 + irandom_range(0, 10)
+    }
 }
 else if(current_time - attack_start_time >= atk_anim_duration) {
     // Check for hit
