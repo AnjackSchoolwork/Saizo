@@ -8,21 +8,7 @@ level_state = game_controller.level_state_current
 if(controller == "keyboard") {
     // Handle keyboard input here
     
-    // Debug and cheat controls
-    if(keyboard_check(ord('O'))) {
-        obj_player_1.char_health -= 100
-    }
     
-    if(keyboard_check(ord('P'))) {
-        if(room_previous(room) != undefined) {
-            room = room_previous(room)
-        }
-    }
-    else if(keyboard_check(ord('N'))) {
-        if(room_next(room) != undefined) {
-            room = room_next(room)
-        }
-    }
     
     
     //##########MOVEMENT BEGIN##########

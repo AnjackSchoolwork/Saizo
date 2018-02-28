@@ -76,12 +76,36 @@ if(game_controller.level_state_current == game_controller.level_states[? "menu"]
     }
 }
 else {
-    // Allow input when player is not stunned
-    if(obj_player.char_state_current != obj_player.char_states[? "stunned"] and obj_player.char_state_current != obj_player.char_states[? "dead"]) {
-        with(obj_player) {
-            handleInput()
+    if(instance_number(obj_player_1) &gt; 0) {
+        
+        if(keyboard_check(ord('I'))) {
+            obj_player_1.char_health += 30
+        }
+        else if (keyboard_check(ord('U'))) {
+            obj_player_1.char_health -= 20
+        }
+        // Allow input when player is not stunned
+        if(obj_player.char_state_current != obj_player.char_states[? "stunned"] and obj_player.char_state_current != obj_player.char_states[? "dead"]) {
+            with(obj_player) {
+                handleInput()
+            }
         }
     }
+}
+
+
+if(keyboard_check(ord('P'))) {
+    if(room_previous(room) != undefined) {
+        room = room_previous(room)
+    }
+}
+else if(keyboard_check(ord('N'))) {
+    if(room_next(room) != undefined) {
+        room = room_next(room)
+    }
+}
+if (keyboard_check(vk_escape)) {
+    room = rm_menu_main
 }
 </string>
           </argument>

@@ -55,7 +55,6 @@
     <instance objName="obj_lvl_exit" x="2944" y="896" name="inst_E34F3418" locked="0" code="" scaleX="1.5" scaleY="5.5" colour="4294967295" rotation="0"/>
     <instance objName="obj_vase" x="960" y="832" name="inst_D9833EB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_can" x="1856" y="896" name="inst_92EDC398" locked="0" code="" scaleX="0.719178080558777" scaleY="0.659949600696564" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player_1" x="224" y="864" name="inst_4767211E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_minion" x="640" y="832" name="inst_101B9FC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_minion" x="1184" y="960" name="inst_901BD86E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_minion" x="2752" y="960" name="inst_743D1178" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

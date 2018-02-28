@@ -34,7 +34,7 @@ else if(game_controller.level_state_current == game_controller.level_states[? "a
     
     // fighter_left health bar
     bar_x = view_xview + 20
-    bar_y = view_xview + 40
+    bar_y = view_yview + 40
     bar_outline_length = room_width / 2 - 80
     bar_length = bar_outline_length * (game_controller.fighter_left.char_health / game_controller.fighter_left.char_health_max)
     bar_height = 40

@@ -4,7 +4,7 @@
 
 min_range = 30
 
-
+if(instance_number(obj_player_1) > 0) {
 // Fail gracefully if called without a target
 if(argument_count <= 0) {
     show_debug_message("ai_consider called by " + string(object_get_name(self.object_index)) + " : " + string(self.id) + " but no target specified")
@@ -39,4 +39,5 @@ if(char_state_current == char_states[? "idle"]) {
     else {
         sprite_index = stand_image
     }
+}
 }

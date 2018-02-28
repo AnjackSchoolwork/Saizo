@@ -157,8 +157,8 @@ else {
 
 // Move player to start position
 with(obj_player) {
-    x = obj_start_point.x
-    y = obj_start_point.y
+    //x = obj_start_point.x
+    //y = obj_start_point.y
     
     speed = 0
     direction = 0
@@ -168,16 +168,24 @@ with(obj_player) {
 
 if(level_state_current == level_states[? "arena"]) {
     fighter_left = instance_find(obj_player_1, 0)
-    
+    fighter_left.x = obj_start_point.x
+    fighter_left.y = obj_start_point.y
     fighter_right = instance_find(obj_player_2, 0)
     
     if(fighter_right == noone) {
         fighter_right = instance_find(obj_enemy_base, 0)
     }
 }
-if(level_state_current == level_states[? "intermediate"]) {
+else if(level_state_current == level_states[? "intermediate"]) {
     fighter_left = instance_find(obj_player_1, 0)
+    fighter_left.x = obj_start_point.x
+    fighter_left.y = obj_start_point.y
     fighter_right = instance_find(obj_player_2, 0)
+}
+else {
+    if(instance_number(obj_player_1) &gt; 0) {
+        instance_destroy(instance_find(obj_player_1, 0))
+    }
 }
 </string>
           </argument>
