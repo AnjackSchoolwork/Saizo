@@ -53,8 +53,8 @@ switch(game_controller.difficulty) {
     //          attack with value = chance between 0 and 1
     case dif_med:
         base_speed = 30
-        min_range = 100
-        max_range = 300
+        min_range = 40
+        max_range = 50
         ds_map_add(base_atk_chance, "low", 0.5)
         ds_map_add(base_atk_chance, "medium", 1)
         ds_map_add(base_atk_chance, "high", 1)
@@ -63,8 +63,8 @@ switch(game_controller.difficulty) {
         break
     case dif_high:
         base_speed = 60
-        min_range = 100
-        max_range = 200
+        min_range = 40
+        max_range = 50
         ds_map_add(base_atk_chance, "low", 0.25)
         ds_map_add(base_atk_chance, "medium", 0.5)
         ds_map_add(base_atk_chance, "high", 0.75)
@@ -72,9 +72,9 @@ switch(game_controller.difficulty) {
         ds_map_add(base_atk_chance, "combo 2", 1)
         break
     default: // Default to low
-        base_speed = 30
-        min_range = 100
-        max_range = 500
+        base_speed = 60
+        min_range = 30
+        max_range = 50
         ds_map_add(base_atk_chance, "low", 1)
         ds_map_add(base_atk_chance, "medium", 1)
         ds_map_add(base_atk_chance, "high", 1)

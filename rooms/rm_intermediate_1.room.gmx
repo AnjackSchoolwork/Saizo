@@ -60,7 +60,7 @@
     <instance objName="obj_enemy_minion" x="1184" y="960" name="inst_901BD86E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_minion" x="2752" y="960" name="inst_743D1178" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_minion" x="2080" y="800" name="inst_BF19EB35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_pickup_health" x="2272" y="768" name="inst_4334A748" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_pickup_health" x="1408" y="896" name="inst_4334A748" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_enemy_minion" x="1600" y="800" name="inst_834876D5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

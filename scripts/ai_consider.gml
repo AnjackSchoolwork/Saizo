@@ -2,6 +2,9 @@
 /// This is the basic behavior code for fighter in arena levels
 /// Behavior is based upon difficulty level and is defined in ai_controller
 
+min_range = 30
+
+
 // Fail gracefully if called without a target
 if(argument_count <= 0) {
     show_debug_message("ai_consider called by " + string(object_get_name(self.object_index)) + " : " + string(self.id) + " but no target specified")

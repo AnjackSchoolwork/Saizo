@@ -3,8 +3,8 @@
 if(object_index != obj_player_1) {
     if(current_time - attack_start_time >= choose(1000, 2000)) {
         
-        obj_player_1.char_health -= 10 + irandom_range(0, 10)
-        char_state_current = char_states[? "idle"]
+        obj_player_1.char_health -= 5
+        
         sprite_index = spr_left
         enter_state_idle()
     }
