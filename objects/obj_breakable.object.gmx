@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>obj_health = 15
 
+broken = false
 
 sprite_index = spr_normal
 </string>
@@ -51,10 +52,15 @@ sprite_index = spr_normal
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (obj_health &lt;= 0) {
-    image_speed = 0.2
+            <string>if (obj_health &lt;= 0 and !broken) {
+    broken = true
+    instance_create(x, y, obj_pickup_health)
+    object_set_depth(obj_pickup_health, -100)
     image_index = spr_break
+    image_speed = 0.2
+    show_debug_message("BROKED!")
 }
+
 </string>
           </argument>
         </arguments>

@@ -93,6 +93,7 @@
     <background>background\bkgrnd_scrolling</background>
     <background>background\bkgrnd_main_menu</background>
     <background>background\bkgrnd_credits</background>
+    <background>background\background8</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -150,7 +151,7 @@
     </objects>
     <objects name="Pickups">
       <object>objects\obj_pickup</object>
-      <object>objects\obj_pickukp_health</object>
+      <object>objects\obj_pickup_health</object>
       <object>objects\obj_powerup</object>
     </objects>
   </objects>
