@@ -14,13 +14,13 @@ if(controller == "keyboard") {
     }
     
     if(keyboard_check(ord('P'))) {
-        if(room_previous != undefined) {
-            room = room_previous
+        if(room_previous(room) != undefined) {
+            room = room_previous(room)
         }
     }
     else if(keyboard_check(ord('N'))) {
-        if(room_next != undefined) {
-            room = room_next
+        if(room_next(room) != undefined) {
+            room = room_next(room)
         }
     }
     

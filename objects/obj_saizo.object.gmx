@@ -41,6 +41,7 @@ spr_walk_right = spr_saizo_walk
 spr_atk_low = spr_saizo_atk_low
 spr_atk_mid = spr_saizo_atk_mid
 spr_atk_high = spr_saizo_atk_high
+spr_death = spr_saizo_death
 </string>
           </argument>
         </arguments>

@@ -73,9 +73,9 @@ ds_map_add(keyboard_controls, "up", vk_up)
 ds_map_add(keyboard_controls, "down", vk_down)
 ds_map_add(keyboard_controls, "left", vk_left)
 ds_map_add(keyboard_controls, "right", vk_right)
-ds_map_add(keyboard_controls, "h_atk", ord('V'))
-ds_map_add(keyboard_controls, "m_atk", ord('B'))
-ds_map_add(keyboard_controls, "l_atk", ord('N'))
+ds_map_add(keyboard_controls, "h_atk", ord('Z'))
+ds_map_add(keyboard_controls, "m_atk", ord('X'))
+ds_map_add(keyboard_controls, "l_atk", ord('C'))
 
 gamepad_controls = ds_map_create()
 //ds_map_add(gamepad_controls, "up", 

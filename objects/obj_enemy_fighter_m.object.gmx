@@ -38,6 +38,7 @@ spr_left = spr_minion_left
 spr_right = spr_minion_right
 spr_walk_left = spr_minion_walk_left
 spr_walk_right = spr_minion_walk_right
+spr_death = spr_minion_death
 </string>
           </argument>
         </arguments>

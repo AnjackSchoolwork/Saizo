@@ -39,6 +39,7 @@
       <sprite>sprites\spr_minion_punch_right</sprite>
       <sprite>sprites\spr_minion_walk_right</sprite>
       <sprite>sprites\spr_minion_walk_left</sprite>
+      <sprite>sprites\spr_minion_death</sprite>
     </sprites>
     <sprites name="menu">
       <sprite>sprites\spr_btn_credits</sprite>
@@ -58,6 +59,7 @@
       <sprite>sprites\spr_saizo_combo_standard</sprite>
       <sprite>sprites\spr_saizo_aoe</sprite>
       <sprite>sprites\spr_saizo_fireball</sprite>
+      <sprite>sprites\spr_saizo_death</sprite>
     </sprites>
     <sprites name="Koth">
       <sprite>sprites\spr_koth_right</sprite>
@@ -70,6 +72,7 @@
       <sprite>sprites\spr_koth_strike_mid</sprite>
       <sprite>sprites\spr_koth_walk_right</sprite>
       <sprite>sprites\spr_koth_walk_left</sprite>
+      <sprite>sprites\spr_koth_death</sprite>
     </sprites>
     <sprites name="Props">
       <sprite>sprites\spr_vase</sprite>

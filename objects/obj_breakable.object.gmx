@@ -27,8 +27,6 @@
             <kind>1</kind>
             <string>obj_health = 15
 
-spr_normal = noone
-spr_break = noone
 
 sprite_index = spr_normal
 </string>
